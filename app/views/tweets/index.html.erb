@@ -2,6 +2,6 @@
 
 <ul>
 <% @tweets.each do |tweet| %>
-  <li><%= tweet.user %> - <%= tweet.content %></li>
+  <li><%= tweet.user %> - <%= tweet.content %> (<%= tweet.tweet_id %>)</li>
 <% end %>
 </ul>
