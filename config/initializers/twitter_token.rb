@@ -1,8 +1,8 @@
 require 'twitter'
 
 Twitter.configure do |config|
-  config.consumer_key = "YOUR_CONSUMER_KEY"
-  config.consumer_secret = "YOUR_CONSUMER_SECRET"
-  config.oauth_token = "YOUR_OAUTH_TOKEN"
-  config.oauth_token_secret = "YOUR_OAUTH_TOKEN_SECRET"
+  config.consumer_key = "wpGytCOMwahcu2NsIeDYQ"
+  config.consumer_secret = "qak5OnYJcYfTDQoPx0WXLuuwDIkGHE5wrj26uilA"
+  config.oauth_token = "14657786-vU7qs3chN6V6DCth82VzgZUJfpEvqLWiVoGzyEKFW"
+  config.oauth_token_secret = "9XlsFgf2Q3Gak2GJDNQRlvLylGmrZhWaKn9GWJ9n1s"
 end
