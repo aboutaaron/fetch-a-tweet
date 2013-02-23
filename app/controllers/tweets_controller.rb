@@ -9,5 +9,11 @@ class TweetsController < ApplicationController
   end
 
   def new
+    @tweet = Tweet.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @tweet }
+    end
   end
 end
