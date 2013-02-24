@@ -24,6 +24,7 @@ end
 
 group :development do
   gem "better_errors"
+  gem 'dynamic_form'
 end
 
 gem 'jquery-rails'
