@@ -1,9 +1,10 @@
-<h1>Fetch-A-Tweet</h1>
+<div class="span6 offset3">
+    <ul class="unstyled">
+    <% @tweets.each do |tweet| %>
+      <li>
+        <span id="user"><%= tweet.user %></span> <span id="content"><%= tweet.content %></span> (<span id="tweet-id"><%= tweet.tweet_id %></span>)</li>
+    <% end %>
+    </ul>
 
-<ul>
-<% @tweets.each do |tweet| %>
-  <li><%= tweet.user %> - <%= tweet.content %> (<%= tweet.tweet_id %>)</li>
-<% end %>
-</ul>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+    <%= link_to 'Fetch a new tweet!', new_tweet_path %>
+</div>

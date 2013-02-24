@@ -1,10 +1,6 @@
 class TweetsController < ApplicationController
   def index
     @tweets = Tweet.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-    end
   end
 
   def new
@@ -13,10 +9,6 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-    end
   end
 
   def create
