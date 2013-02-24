@@ -4,7 +4,6 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @tweets }
     end
   end
 
@@ -17,20 +16,20 @@ class TweetsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @tweet }
     end
   end
 
   def create
-    @tweet = Tweet.new(params[:tweet])
+    @tweet = Tweet.new
+    @tweet.user = Twitter.status(params[:tweet][:tweet_id]).from_user
+    @tweet.tweet_id = params[:tweet][:tweet_id]
+    @tweet.content = Twitter.status(params[:tweet][:tweet_id]).text
 
     respond_to do |format|
       if @tweet.save
         format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
-        format.json { render json: @tweet, status: :created, location: @tweet }
       else
         format.html { render action: "new" }
-        format.json { render json: @tweet.errors, status: :unprocessable_entity }
       end
     end
   end
