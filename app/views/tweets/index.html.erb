@@ -1,4 +1,4 @@
-<h1>Listing tweets</h1>
+<h1>Fetch-A-Tweet</h1>
 
 <ul>
 <% @tweets.each do |tweet| %>
@@ -6,4 +6,4 @@
 <% end %>
 </ul>
 
-<%= Twitter.status(27558893223).text %>
+<%= link_to 'New Tweet', new_tweet_path %>
