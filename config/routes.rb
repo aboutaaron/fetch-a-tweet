@@ -1,7 +1,7 @@
 FetchATweet::Application.routes.draw do
-  get "tweets/index"
+  resources :tweets
 
-  get "tweets/new"
+  root :to => 'tweets#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
