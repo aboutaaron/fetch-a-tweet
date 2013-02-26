@@ -1,5 +1,10 @@
 <div class="span6 offset3">
-    <h1 id="header">New tweet</h1>
+    <section class="page-header">
+        <h2>New tweet</h2>
+        <% if @error %>
+            <small class="label label-important"><%= @error %></small>
+        <% end %>
+    </section>
 
     <%= render 'form' %>
 
