@@ -1,5 +1,5 @@
 class AddIndexToTweetId < ActiveRecord::Migration
   def change
-    add_index :tweet_id
+    add_index :tweets, :tweet_id
   end
 end
