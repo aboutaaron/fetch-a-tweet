@@ -15,4 +15,4 @@
 /tmp
 
 # Remove twitter token
-/config/initializers/twitter_token.rb
+/config/initializers/twitter_token_dev.rb
