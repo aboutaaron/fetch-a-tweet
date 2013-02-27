@@ -13,3 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Remove twitter token
+/config/initializers/twitter_token.rb
