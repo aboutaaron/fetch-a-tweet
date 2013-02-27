@@ -13,10 +13,11 @@ class TweetsController < ApplicationController
 
   def create
     begin
+      t = Twitter.status(params[:tweet][:tweet_id]).attrs
       @tweet = Tweet.new
-      @tweet.user = Twitter.status(params[:tweet][:tweet_id]).from_user
-      @tweet.tweet_id = params[:tweet][:tweet_id]
-      @tweet.content = Twitter.status(params[:tweet][:tweet_id]).text
+      @tweet.user = t[:user][:name]
+      @tweet.tweet_id = t[:id]
+      @tweet.content = t[:text]
       respond_to do |format|
         if @tweet.save
           format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
