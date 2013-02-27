@@ -18,6 +18,7 @@ class TweetsController < ApplicationController
       @tweet.user = t[:user][:name]
       @tweet.tweet_id = t[:id]
       @tweet.content = t[:text]
+      # @image = t[:profile_image_url]
       respond_to do |format|
         if @tweet.save
           format.html { redirect_to @tweet, notice: 'Tweet was successfully created.' }
