@@ -16,7 +16,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new
 
     if tweet_from_twitter
-      @tweet.user = tweet_from_twitter.user.name
+      @tweet.user = tweet_from_twitter.user.screen_name
       @tweet.tweet_id = tweet_from_twitter.id
       @tweet.content = tweet_from_twitter.text
 
