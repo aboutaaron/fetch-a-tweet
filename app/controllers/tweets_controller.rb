@@ -1,6 +1,6 @@
 class TweetsController < ApplicationController
   def index
-    @tweets = Tweet.paginate(:page => params[:page], :per_page => 10)
+    @tweets = Tweet.paginate(:page => params[:page], :per_page => 10, :order => "created_at DESC")
   end
 
   def new
