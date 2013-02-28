@@ -1,11 +1,7 @@
 <div class="span6 offset3">
-    <ul class="unstyled">
-    <% @tweets.each do |tweet| %>
-      <li>
-        <span id="user"><%= hyperlink_the_tings("@#{tweet.user}") %></span> <span id="content"><%= hyperlink_the_tings(tweet.content) + " (#{tweet.id})" %></span> (<span id="tweet-id"><%= tweet.tweet_id %></span>)</li>
-    <% end %>
+    <ul class="unstyled" id="tweets">
+        <%= render "tweets" %>
     </ul>
+    <%= link_to 'Fetch a new tweet!', new_tweet_path, :class => 'btn btn-large' %>
     <%= will_paginate @tweets %>
-
-    <%= link_to 'Fetch a new tweet!', new_tweet_path %>
 </div>

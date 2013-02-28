@@ -1,0 +1,4 @@
+<% @tweets.each do |tweet| %>
+  <li>
+    <span id="user"><%= hyperlink_the_tings("@#{tweet.user}") %></span> <span id="content"><%= hyperlink_the_tings(tweet.content) %></span> (<span id="tweet-id"><%= tweet.tweet_id %></span>)</li>
+<% end %>
